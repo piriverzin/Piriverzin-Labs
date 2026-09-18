@@ -1,0 +1,78 @@
+# ===================== ЧАСТЬ 1. GitHub / Codespaces =====================
+
+# Создание программы на ассемблере FASM (32-бит)
+fasm piriverzin.asm piriverzin
+chmod +x piriverzin
+./piriverzin
+
+# Программа на C
+gcc -o C_version С_version.c
+./C_version
+
+# Дизассемблирование
+gdb -batch -ex "file piriverzin" -ex "starti" -ex "disassemble /r \$pc,\$pc+100" > Disassemble
+gdb -batch -ex "file C_version" -ex "disassemble /r main" >> Disassemble
+
+# Папка sandbox
+mkdir sandbox
+mv piriverzin.asm piriverzin С_version.c C_version Disassemble sandbox/
+
+# ===================== ЧАСТЬ 2. Работа с файлами =====================
+
+# Создание структуры папок
+mkdir -p Work
+mkdir -p "Work/Лабораторная работа №1!"
+mkdir -p "Work/Пириверзин Елисей Олегович"
+
+# Права доступа
+chmod 732 "Work/Лабораторная работа №1!"
+chmod 200 "Work/Пириверзин Елисей Олегович"
+
+# Создание файлов
+cd Work
+touch "Text @1" "Text \$2" "Text #3"
+
+# Запись текста без редактора
+printf 'Птица говорун отличается умом и сообразительностью!\n\nОтличается умом, отличается сообразительностью...\n' > "Text @1"
+
+# Копирование
+cp "Text @1" "Text \$2"
+
+# Перемещение и копирование
+chmod 700 "Пириверзин Елисей Олегович"
+mv "Text \$2" "Лабораторная работа №1!"
+cp "Text @1" "Пириверзин Елисей Олегович/"
+
+# Сжатие и архивация
+gzip "Text @1" "Text #3"
+tar -cf MyAchiv "Text @1.gz" "Text #3.gz"
+
+# Восстановление Text @1
+gzip -dk "Text @1.gz"
+
+# Работа с Text #3
+head -n 1 "Text @1" > "Text #3"
+echo "Будь осторожен! Преступник вооружен!" >> "Text #3"
+
+# Result_one -> Result_two
+tac "Text @1" > "Пириверзин Елисей Олегович/Result_one"
+mv "Пириверзин Елисей Олегович/Result_one" "Пириверзин Елисей Олегович/Result_two"
+
+# Result_3
+set +H
+find "Пириверзин Елисей Олегович" -maxdepth 1 -name 'T*' > "Лабораторная работа №1!/Result_3"
+uname -a >> "Лабораторная работа №1!/Result_3"
+date >> "Лабораторная работа №1!/Result_3"
+
+# Возврат прав
+cd ..
+chmod 200 "Work/Пириверзин Елисей Олегович"
+
+# Финальная структура
+mkdir -p Lab_1
+mv sandbox Work Work_files Lab_1/
+
+# Синхронизация с GitHub
+git add .
+git commit -m "Лабораторная работа: System_programming"
+git push origin main

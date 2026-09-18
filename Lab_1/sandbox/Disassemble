@@ -1,0 +1,63 @@
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.ubuntu.com>
+Enable debuginfod for this session? (y or [n]) [answered N; input not from terminal]
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+
+Program stopped.
+0x08048074 in ?? ()
+Dump of assembler code from 0x8048074 to 0x80480d8:
+=> 0x08048074:	b8 04 00 00 00     	mov    $0x4,%eax
+   0x08048079:	bb 01 00 00 00     	mov    $0x1,%ebx
+   0x0804807e:	b9 bf 90 04 08     	mov    $0x80490bf,%ecx
+   0x08048083:	ba 15 00 00 00     	mov    $0x15,%edx
+   0x08048088:	cd 80              	int    $0x80
+   0x0804808a:	b8 04 00 00 00     	mov    $0x4,%eax
+   0x0804808f:	bb 01 00 00 00     	mov    $0x1,%ebx
+   0x08048094:	b9 d4 90 04 08     	mov    $0x80490d4,%ecx
+   0x08048099:	ba 0d 00 00 00     	mov    $0xd,%edx
+   0x0804809e:	cd 80              	int    $0x80
+   0x080480a0:	b8 04 00 00 00     	mov    $0x4,%eax
+   0x080480a5:	bb 01 00 00 00     	mov    $0x1,%ebx
+   0x080480aa:	b9 e1 90 04 08     	mov    $0x80490e1,%ecx
+   0x080480af:	ba 11 00 00 00     	mov    $0x11,%edx
+   0x080480b4:	cd 80              	int    $0x80
+   0x080480b6:	b8 01 00 00 00     	mov    $0x1,%eax
+   0x080480bb:	31 db              	xor    %ebx,%ebx
+   0x080480bd:	cd 80              	int    $0x80
+   0x080480bf:	d0 bf d0 b8 d1 80  	sarb   $1,-0x7f2e4730(%edi)
+   0x080480c5:	d0 b8 d0 b2 d0 b5  	sarb   $1,-0x4a2f4d30(%eax)
+   0x080480cb:	d1 80 d0 b7 d0 b8  	roll   $1,-0x472f4830(%eax)
+   0x080480d1:	d0 bd 0a d0 b5 d0  	sarb   $1,-0x2f4a2ff6(%ebp)
+   0x080480d7:	bb d0 b8 d1 81     	mov    $0x81d1b8d0,%ebx
+End of assembler dump.
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.ubuntu.com>
+Enable debuginfod for this session? (y or [n]) [answered N; input not from terminal]
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.ubuntu.com>
+Enable debuginfod for this session? (y or [n]) [answered N; input not from terminal]
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+Dump of assembler code for function main:
+   0x0000000000001149 <+0>:	f3 0f 1e fa        	endbr64
+   0x000000000000114d <+4>:	55                 	push   %rbp
+   0x000000000000114e <+5>:	48 89 e5           	mov    %rsp,%rbp
+   0x0000000000001151 <+8>:	48 8d 05 ac 0e 00 00	lea    0xeac(%rip),%rax        # 0x2004
+   0x0000000000001158 <+15>:	48 89 c7           	mov    %rax,%rdi
+   0x000000000000115b <+18>:	e8 f0 fe ff ff     	call   0x1050 <puts@plt>
+   0x0000000000001160 <+23>:	48 8d 05 b2 0e 00 00	lea    0xeb2(%rip),%rax        # 0x2019
+   0x0000000000001167 <+30>:	48 89 c7           	mov    %rax,%rdi
+   0x000000000000116a <+33>:	e8 e1 fe ff ff     	call   0x1050 <puts@plt>
+   0x000000000000116f <+38>:	48 8d 05 aa 0e 00 00	lea    0xeaa(%rip),%rax        # 0x2020
+   0x0000000000001176 <+45>:	48 89 c7           	mov    %rax,%rdi
+   0x0000000000001179 <+48>:	e8 d2 fe ff ff     	call   0x1050 <puts@plt>
+   0x000000000000117e <+53>:	b8 00 00 00 00     	mov    $0x0,%eax
+   0x0000000000001183 <+58>:	5d                 	pop    %rbp
+   0x0000000000001184 <+59>:	c3                 	ret
+End of assembler dump.
